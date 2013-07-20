@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE938FA1179AFCBD0013699D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE938FA0179AFCBD0013699D /* UIKit.framework */; };
+		CE938FA3179AFCBD0013699D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE938FA2179AFCBD0013699D /* Foundation.framework */; };
+		CE938FA5179AFCBD0013699D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE938FA4179AFCBD0013699D /* CoreGraphics.framework */; };
+		CE938FAB179AFCBD0013699D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE938FA9179AFCBD0013699D /* InfoPlist.strings */; };
+		CE938FAD179AFCBD0013699D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE938FAC179AFCBD0013699D /* main.m */; };
+		CE938FB1179AFCBD0013699D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE938FB0179AFCBD0013699D /* AppDelegate.m */; };
+		CE938FB3179AFCBD0013699D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FB2179AFCBD0013699D /* Default.png */; };
+		CE938FB5179AFCBD0013699D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FB4179AFCBD0013699D /* Default@2x.png */; };
+		CE938FB7179AFCBD0013699D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FB6179AFCBD0013699D /* Default-568h@2x.png */; };
+		CE938FBA179AFCBD0013699D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE938FB8179AFCBD0013699D /* MainStoryboard.storyboard */; };
+		CE938FBD179AFCBE0013699D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE938FBC179AFCBE0013699D /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE938F9D179AFCBD0013699D /* BlueRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE938FA0179AFCBD0013699D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE938FA2179AFCBD0013699D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE938FA4179AFCBD0013699D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE938FA8179AFCBD0013699D /* BlueRC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlueRC-Info.plist"; sourceTree = "<group>"; };
+		CE938FAA179AFCBD0013699D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE938FAC179AFCBD0013699D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE938FAE179AFCBD0013699D /* BlueRC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlueRC-Prefix.pch"; sourceTree = "<group>"; };
+		CE938FAF179AFCBD0013699D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE938FB0179AFCBD0013699D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE938FB2179AFCBD0013699D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CE938FB4179AFCBD0013699D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CE938FB6179AFCBD0013699D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE938FB9179AFCBD0013699D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CE938FBB179AFCBE0013699D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE938FBC179AFCBE0013699D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE938F9A179AFCBD0013699D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE938FA1179AFCBD0013699D /* UIKit.framework in Frameworks */,
+				CE938FA3179AFCBD0013699D /* Foundation.framework in Frameworks */,
+				CE938FA5179AFCBD0013699D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE938F94179AFCBD0013699D = {
+			isa = PBXGroup;
+			children = (
+				CE938FA6179AFCBD0013699D /* BlueRC */,
+				CE938F9F179AFCBD0013699D /* Frameworks */,
+				CE938F9E179AFCBD0013699D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE938F9E179AFCBD0013699D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE938F9D179AFCBD0013699D /* BlueRC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE938F9F179AFCBD0013699D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE938FA0179AFCBD0013699D /* UIKit.framework */,
+				CE938FA2179AFCBD0013699D /* Foundation.framework */,
+				CE938FA4179AFCBD0013699D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE938FA6179AFCBD0013699D /* BlueRC */ = {
+			isa = PBXGroup;
+			children = (
+				CE938FAF179AFCBD0013699D /* AppDelegate.h */,
+				CE938FB0179AFCBD0013699D /* AppDelegate.m */,
+				CE938FB8179AFCBD0013699D /* MainStoryboard.storyboard */,
+				CE938FBB179AFCBE0013699D /* ViewController.h */,
+				CE938FBC179AFCBE0013699D /* ViewController.m */,
+				CE938FA7179AFCBD0013699D /* Supporting Files */,
+			);
+			path = BlueRC;
+			sourceTree = "<group>";
+		};
+		CE938FA7179AFCBD0013699D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE938FA8179AFCBD0013699D /* BlueRC-Info.plist */,
+				CE938FA9179AFCBD0013699D /* InfoPlist.strings */,
+				CE938FAC179AFCBD0013699D /* main.m */,
+				CE938FAE179AFCBD0013699D /* BlueRC-Prefix.pch */,
+				CE938FB2179AFCBD0013699D /* Default.png */,
+				CE938FB4179AFCBD0013699D /* Default@2x.png */,
+				CE938FB6179AFCBD0013699D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE938F9C179AFCBD0013699D /* BlueRC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE938FC0179AFCBE0013699D /* Build configuration list for PBXNativeTarget "BlueRC" */;
+			buildPhases = (
+				CE938F99179AFCBD0013699D /* Sources */,
+				CE938F9A179AFCBD0013699D /* Frameworks */,
+				CE938F9B179AFCBD0013699D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueRC;
+			productName = BlueRC;
+			productReference = CE938F9D179AFCBD0013699D /* BlueRC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE938F95179AFCBD0013699D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Scott Cheezem";
+			};
+			buildConfigurationList = CE938F98179AFCBD0013699D /* Build configuration list for PBXProject "BlueRC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE938F94179AFCBD0013699D;
+			productRefGroup = CE938F9E179AFCBD0013699D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE938F9C179AFCBD0013699D /* BlueRC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE938F9B179AFCBD0013699D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE938FAB179AFCBD0013699D /* InfoPlist.strings in Resources */,
+				CE938FB3179AFCBD0013699D /* Default.png in Resources */,
+				CE938FB5179AFCBD0013699D /* Default@2x.png in Resources */,
+				CE938FB7179AFCBD0013699D /* Default-568h@2x.png in Resources */,
+				CE938FBA179AFCBD0013699D /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE938F99179AFCBD0013699D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE938FAD179AFCBD0013699D /* main.m in Sources */,
+				CE938FB1179AFCBD0013699D /* AppDelegate.m in Sources */,
+				CE938FBD179AFCBE0013699D /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE938FA9179AFCBD0013699D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE938FAA179AFCBD0013699D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE938FB8179AFCBD0013699D /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE938FB9179AFCBD0013699D /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE938FBE179AFCBE0013699D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE938FBF179AFCBE0013699D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE938FC1179AFCBE0013699D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlueRC/BlueRC-Prefix.pch";
+				INFOPLIST_FILE = "BlueRC/BlueRC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE938FC2179AFCBE0013699D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlueRC/BlueRC-Prefix.pch";
+				INFOPLIST_FILE = "BlueRC/BlueRC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE938F98179AFCBD0013699D /* Build configuration list for PBXProject "BlueRC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE938FBE179AFCBE0013699D /* Debug */,
+				CE938FBF179AFCBE0013699D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE938FC0179AFCBE0013699D /* Build configuration list for PBXNativeTarget "BlueRC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE938FC1179AFCBE0013699D /* Debug */,
+				CE938FC2179AFCBE0013699D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE938F95179AFCBD0013699D /* Project object */;
+}
