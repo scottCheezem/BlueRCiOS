@@ -18,6 +18,13 @@
 		CE938FB7179AFCBD0013699D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FB6179AFCBD0013699D /* Default-568h@2x.png */; };
 		CE938FBA179AFCBD0013699D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE938FB8179AFCBD0013699D /* MainStoryboard.storyboard */; };
 		CE938FBD179AFCBE0013699D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE938FBC179AFCBE0013699D /* ViewController.m */; };
+		CE938FC7179AFD4A0013699D /* analogue_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FC3179AFD4A0013699D /* analogue_bg.png */; };
+		CE938FC8179AFD4A0013699D /* analogue_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FC4179AFD4A0013699D /* analogue_bg@2x.png */; };
+		CE938FC9179AFD4A0013699D /* analogue_handle.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FC5179AFD4A0013699D /* analogue_handle.png */; };
+		CE938FCA179AFD4A0013699D /* analogue_handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE938FC6179AFD4A0013699D /* analogue_handle@2x.png */; };
+		CE938FCD179AFD6A0013699D /* JSAnalogueStick.m in Sources */ = {isa = PBXBuildFile; fileRef = CE938FCC179AFD6A0013699D /* JSAnalogueStick.m */; };
+		CE938FD2179AFE5B0013699D /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE938FD0179AFE5B0013699D /* BLE.m */; };
+		CE938FD4179AFE7B0013699D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE938FD3179AFE7B0013699D /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,16 @@
 		CE938FB9179AFCBD0013699D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CE938FBB179AFCBE0013699D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE938FBC179AFCBE0013699D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE938FC3179AFD4A0013699D /* analogue_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = analogue_bg.png; sourceTree = "<group>"; };
+		CE938FC4179AFD4A0013699D /* analogue_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analogue_bg@2x.png"; sourceTree = "<group>"; };
+		CE938FC5179AFD4A0013699D /* analogue_handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = analogue_handle.png; sourceTree = "<group>"; };
+		CE938FC6179AFD4A0013699D /* analogue_handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analogue_handle@2x.png"; sourceTree = "<group>"; };
+		CE938FCB179AFD6A0013699D /* JSAnalogueStick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSAnalogueStick.h; path = ../JSAnalogueStick.h; sourceTree = "<group>"; };
+		CE938FCC179AFD6A0013699D /* JSAnalogueStick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSAnalogueStick.m; path = ../JSAnalogueStick.m; sourceTree = "<group>"; };
+		CE938FCF179AFE5B0013699D /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		CE938FD0179AFE5B0013699D /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		CE938FD1179AFE5B0013699D /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		CE938FD3179AFE7B0013699D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE938FD4179AFE7B0013699D /* CoreBluetooth.framework in Frameworks */,
 				CE938FA1179AFCBD0013699D /* UIKit.framework in Frameworks */,
 				CE938FA3179AFCBD0013699D /* Foundation.framework in Frameworks */,
 				CE938FA5179AFCBD0013699D /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +91,8 @@
 		CE938F9F179AFCBD0013699D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE938FCE179AFE5B0013699D /* BLE_Framework */,
+				CE938FD3179AFE7B0013699D /* CoreBluetooth.framework */,
 				CE938FA0179AFCBD0013699D /* UIKit.framework */,
 				CE938FA2179AFCBD0013699D /* Foundation.framework */,
 				CE938FA4179AFCBD0013699D /* CoreGraphics.framework */,
@@ -83,6 +103,8 @@
 		CE938FA6179AFCBD0013699D /* BlueRC */ = {
 			isa = PBXGroup;
 			children = (
+				CE938FCB179AFD6A0013699D /* JSAnalogueStick.h */,
+				CE938FCC179AFD6A0013699D /* JSAnalogueStick.m */,
 				CE938FAF179AFCBD0013699D /* AppDelegate.h */,
 				CE938FB0179AFCBD0013699D /* AppDelegate.m */,
 				CE938FB8179AFCBD0013699D /* MainStoryboard.storyboard */,
@@ -103,8 +125,31 @@
 				CE938FB2179AFCBD0013699D /* Default.png */,
 				CE938FB4179AFCBD0013699D /* Default@2x.png */,
 				CE938FB6179AFCBD0013699D /* Default-568h@2x.png */,
+				CE938FD5179AFEF30013699D /* images */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE938FCE179AFE5B0013699D /* BLE_Framework */ = {
+			isa = PBXGroup;
+			children = (
+				CE938FCF179AFE5B0013699D /* BLE.h */,
+				CE938FD0179AFE5B0013699D /* BLE.m */,
+				CE938FD1179AFE5B0013699D /* BLEDefines.h */,
+			);
+			path = BLE_Framework;
+			sourceTree = "<group>";
+		};
+		CE938FD5179AFEF30013699D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CE938FC3179AFD4A0013699D /* analogue_bg.png */,
+				CE938FC4179AFD4A0013699D /* analogue_bg@2x.png */,
+				CE938FC5179AFD4A0013699D /* analogue_handle.png */,
+				CE938FC6179AFD4A0013699D /* analogue_handle@2x.png */,
+			);
+			name = images;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +208,10 @@
 				CE938FB5179AFCBD0013699D /* Default@2x.png in Resources */,
 				CE938FB7179AFCBD0013699D /* Default-568h@2x.png in Resources */,
 				CE938FBA179AFCBD0013699D /* MainStoryboard.storyboard in Resources */,
+				CE938FC7179AFD4A0013699D /* analogue_bg.png in Resources */,
+				CE938FC8179AFD4A0013699D /* analogue_bg@2x.png in Resources */,
+				CE938FC9179AFD4A0013699D /* analogue_handle.png in Resources */,
+				CE938FCA179AFD4A0013699D /* analogue_handle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +225,8 @@
 				CE938FAD179AFCBD0013699D /* main.m in Sources */,
 				CE938FB1179AFCBD0013699D /* AppDelegate.m in Sources */,
 				CE938FBD179AFCBE0013699D /* ViewController.m in Sources */,
+				CE938FCD179AFD6A0013699D /* JSAnalogueStick.m in Sources */,
+				CE938FD2179AFE5B0013699D /* BLE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
