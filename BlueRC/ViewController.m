@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 
+#define LED3 1
+#define LED5 3
+#define LED6 5
+#define LED9 7
+
+
 @interface ViewController ()
 
 @end
@@ -52,37 +58,61 @@
 -(void)processAnalogControls{
     
     if([ble isConnected]){
-        NSString *s;
+
         
         
+        UInt8 buf[9] = {0x03, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00, 0x00};
+        //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
+        //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
+        int scaledXval = abs(floorf((float)self.analogStick.xValue*255));
         
+        int scaledYval = abs(floorf((float)self.analogStick.yValue*255));
         
         if(self.analogStick.xValue >= 0 && self.analogStick.yValue >= 0){
-            //qud 1
-            int led = 3;
+            //quad 1
             
-            int scaledXval = abs(floorf((float)self.analogStick.xValue*255));
-            int scaledYval = abs(floorf((float)self.analogStick.yValue*255));
-            
-            UInt8 buf[3] =  {0x03, 0x00, 0x00};
-            buf[1] = scaledYval;
-            NSData *d = [[NSData alloc]initWithBytes:buf length:3];
-            [ble write:d];
+            buf[LED3] = scaledXval;
+            buf[LED5] = scaledYval;
+            //buf[LED6] = 0x00;
+            //buf[LED9] = 0x00;
 
-            //NSLog(@"%@",s);
-            //[self sendDataWithString:s];
         }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue >= 0){
             //quad 2
+            buf[LED3] = 0x00;
+            buf[LED5] = scaledYval;
+            buf[LED6] = scaledXval;
+            buf[LED9] = 0x00;
+            
+            
         }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue <= 0){
             //quad 3
+            buf[LED3] = 0x00;
+            buf[LED5] = 0x00;
+            buf[LED6] = scaledXval;
+            buf[LED9] = scaledYval;
+            
+            
         }else if (self.analogStick.xValue >=0 && self.analogStick.yValue <= 0){
             //quad 4
+            buf[LED3] = 0x00;
+            buf[LED5] = scaledXval;
+            buf[LED6] = 0x00;
+            buf[LED9] = scaledYval;
+            
         }
         
         
+        NSData *d = [[NSData alloc]initWithBytes:buf length:9];
+        
+        [ble write:d];
         
         
         
+        /*UInt8 buf[3] =  {0x03, 0x00, 0x00};
+         buf[1] = scaledYval;
+         NSData *d = [[NSData alloc]initWithBytes:buf length:3];
+         [ble write:d];*/
+
         //[self sendData];
     }
 }
@@ -96,25 +126,7 @@
     
 }
 
--(void)sendDataWith:(int)led :(int)val
-{
-    UInt8 buf[3] = {0x01, 0x00, 0x00};
-    
-    
-    
-    
-    NSData *data = [[NSData alloc] initWithBytes:buf length:3];
-    
 
-    [ble write:data];
-}
-
--(void)sendDataWithString:(NSString*)dataString{
-    
-    NSData *d = [dataString dataUsingEncoding:NSUTF8StringEncoding];
-    [ble write:d];
-    
-}
 
 #pragma mark - BLEDelegate
 -(void)bleDidConnect{
