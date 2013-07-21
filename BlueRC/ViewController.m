@@ -150,6 +150,15 @@
 
 -(void)bleDidReceiveData:(unsigned char *)data length:(int)length{
     
+    NSData *d = [NSData dataWithBytes:data length:length];
+    NSString *s = [[NSString alloc]initWithData:d encoding:NSUTF8StringEncoding];
+    
+    if([s isEqualToString:@"1"]){
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    }
+    
+    
+
 }
 
 -(void)bleDidUpdateRSSI:(NSNumber *)rssi{

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06AE81D1179C817700CD66B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AE81D0179C817700CD66B6 /* AudioToolbox.framework */; };
 		CE938FA1179AFCBD0013699D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE938FA0179AFCBD0013699D /* UIKit.framework */; };
 		CE938FA3179AFCBD0013699D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE938FA2179AFCBD0013699D /* Foundation.framework */; };
 		CE938FA5179AFCBD0013699D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE938FA4179AFCBD0013699D /* CoreGraphics.framework */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06AE81CE179C7F8700CD66B6 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		06AE81D0179C817700CD66B6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CE938F9D179AFCBD0013699D /* BlueRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE938FA0179AFCBD0013699D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE938FA2179AFCBD0013699D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AE81D1179C817700CD66B6 /* AudioToolbox.framework in Frameworks */,
 				CE938FD4179AFE7B0013699D /* CoreBluetooth.framework in Frameworks */,
 				CE938FA1179AFCBD0013699D /* UIKit.framework in Frameworks */,
 				CE938FA3179AFCBD0013699D /* Foundation.framework in Frameworks */,
@@ -91,6 +95,8 @@
 		CE938F9F179AFCBD0013699D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06AE81D0179C817700CD66B6 /* AudioToolbox.framework */,
+				06AE81CE179C7F8700CD66B6 /* CoreAudio.framework */,
 				CE938FCE179AFE5B0013699D /* BLE_Framework */,
 				CE938FD3179AFE7B0013699D /* CoreBluetooth.framework */,
 				CE938FA0179AFCBD0013699D /* UIKit.framework */,
@@ -349,6 +355,7 @@
 				CE938FC2179AFCBE0013699D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "JSAnalogueStick.h"
 #import "BLE.h"
 @interface ViewController : UIViewController<JSAnalogueStickDelegate,BLEDelegate>
