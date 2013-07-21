@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 
-#define LED3 1
-#define LED5 3
-#define LED6 5
-#define LED9 7
+//the values reference the index of buf, UPLED referes to the index of the value to set for the led
+#define UPLED 7
+#define RIGHTLED 3
+#define DOWNLED 1
+#define LEFTLED 5
 
 
 @interface ViewController ()
@@ -20,13 +21,17 @@
 
 
 
-@implementation ViewController
+@implementation ViewController{
+    
+}
 
 @synthesize ble;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     
     //self.analogueStick = [[JSAnalogueStick alloc]initWithFrame:self.analogueStick.frame];
     self.analogStick.delegate = self;
@@ -50,9 +55,6 @@
 - (void)updateAnalogueLabel
 {
 	[self.analogTextLabel setText:[NSString stringWithFormat:@"Analogue: %.1f , %.1f", self.analogStick.xValue, self.analogStick.yValue]];
-    
-    
-    
 }
 
 -(void)processAnalogControls{
@@ -60,8 +62,8 @@
     if([ble isConnected]){
 
         
-        
-        UInt8 buf[9] = {0x03, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00, 0x00};
+        //an array of pin addresses and values
+        UInt8 buf[9] = {0x03, 0x00, 0x05, 0x00, 0x06, 0x00, 0x0A, 0x00, 0x00};
         //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
         //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
         int scaledXval = abs(floorf((float)self.analogStick.xValue*255));
@@ -71,33 +73,33 @@
         if(self.analogStick.xValue >= 0 && self.analogStick.yValue >= 0){
             //quad 1
             
-            buf[LED3] = scaledXval;
-            buf[LED5] = scaledYval;
-            //buf[LED6] = 0x00;
-            //buf[LED9] = 0x00;
+            buf[UPLED] = scaledYval;
+            buf[RIGHTLED] = scaledXval;
+            buf[DOWNLED] = 0x00;
+            buf[LEFTLED] = 0x00;
 
         }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue >= 0){
             //quad 2
-            buf[LED3] = 0x00;
-            buf[LED5] = scaledYval;
-            buf[LED6] = scaledXval;
-            buf[LED9] = 0x00;
+            buf[UPLED] = scaledYval;
+            buf[RIGHTLED] = 0x00;
+            buf[DOWNLED] = 0x00;
+            buf[LEFTLED] = scaledXval;
             
             
         }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue <= 0){
             //quad 3
-            buf[LED3] = 0x00;
-            buf[LED5] = 0x00;
-            buf[LED6] = scaledXval;
-            buf[LED9] = scaledYval;
+            buf[UPLED] = 0x00;
+            buf[RIGHTLED] = 0x00;
+            buf[DOWNLED] = scaledYval;
+            buf[LEFTLED] = scaledXval;
             
             
         }else if (self.analogStick.xValue >=0 && self.analogStick.yValue <= 0){
             //quad 4
-            buf[LED3] = 0x00;
-            buf[LED5] = scaledXval;
-            buf[LED6] = 0x00;
-            buf[LED9] = scaledYval;
+            buf[UPLED] = 0x00;
+            buf[RIGHTLED] = scaledXval;
+            buf[DOWNLED] = scaledYval;
+            buf[LEFTLED] = 0x00;
             
         }
         
