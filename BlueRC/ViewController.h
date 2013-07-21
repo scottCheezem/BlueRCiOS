@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "JSAnalogueStick.h"
 #import "BLE.h"
-@interface ViewController : UIViewController<JSAnalogueStickDelegate>
+@interface ViewController : UIViewController<JSAnalogueStickDelegate,BLEDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *analogTextLabel;
 @property (weak, nonatomic) IBOutlet JSAnalogueStick *analogStick;
 
-//@property (weak, nonatomic) IBOutlet JSAnalogueStick *analogueStick;
+
+@property (weak, nonatomic) IBOutlet UIButton *connectButton;
+@property (weak, nonatomic) IBOutlet UILabel *rssiLabel;
 @property (nonatomic, strong) BLE *ble;
 
 

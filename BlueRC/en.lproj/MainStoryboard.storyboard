@@ -20,21 +20,49 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3k-ua-mDB" customClass="JSAnalogueStick">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="RSSI:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTb-Ge-2dP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="KEV-7H-AGv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-39-pcN">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="t3k-ua-mDB" secondAttribute="trailing" constant="92" id="6nB-X0-Z9Q"/>
+                            <constraint firstAttribute="bottom" secondItem="wcu-39-pcN" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7g8-88-1zY"/>
                             <constraint firstAttribute="trailing" secondItem="POe-Ti-7ok" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7kT-6b-3jd"/>
-                            <constraint firstAttribute="trailing" secondItem="t3k-ua-mDB" secondAttribute="trailing" constant="92" id="GAC-hc-cFo"/>
-                            <constraint firstAttribute="bottom" secondItem="t3k-ua-mDB" secondAttribute="bottom" constant="224" id="IUW-ML-mqN"/>
-                            <constraint firstItem="t3k-ua-mDB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="78" id="pVQ-le-h1C"/>
-                            <constraint firstItem="t3k-ua-mDB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="174" id="s87-c6-4pu"/>
+                            <constraint firstAttribute="bottom" secondItem="QTb-Ge-2dP" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="FC4-Lm-aZg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t3k-ua-mDB" secondAttribute="trailing" constant="92" type="user" id="GAC-hc-cFo"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="t3k-ua-mDB" secondAttribute="bottom" constant="224" type="user" id="IUW-ML-mqN"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="174" id="OhH-US-twO"/>
+                            <constraint firstAttribute="trailing" secondItem="wcu-39-pcN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="b05-Hc-Dcb"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="78" id="cSc-Sy-WdT"/>
+                            <constraint firstItem="QTb-Ge-2dP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mhc-CY-iyW"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3" secondAttribute="leading" constant="78" type="user" id="pVQ-le-h1C"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="top" relation="lessThanOrEqual" secondItem="3" secondAttribute="top" constant="174" type="user" id="s87-c6-4pu"/>
                             <constraint firstItem="POe-Ti-7ok" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="uyj-vv-0qM"/>
+                            <constraint firstAttribute="bottom" secondItem="t3k-ua-mDB" secondAttribute="bottom" constant="224" id="y0f-mj-2dk"/>
                             <constraint firstItem="POe-Ti-7ok" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y6z-4g-0CW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="analogStick" destination="t3k-ua-mDB" id="abt-WW-RTv"/>
                         <outlet property="analogTextLabel" destination="POe-Ti-7ok" id="q8o-wg-U5Y"/>
+                        <outlet property="connectButton" destination="wcu-39-pcN" id="g9c-52-idG"/>
+                        <outlet property="rssiLabel" destination="QTb-Ge-2dP" id="bBu-bX-aBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -56,6 +84,8 @@
             <relationships>
                 <relationship kind="outlet" name="analogStick" candidateClass="JSAnalogueStick"/>
                 <relationship kind="outlet" name="analogTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="connectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rssiLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
