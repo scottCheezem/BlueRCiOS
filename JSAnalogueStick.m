@@ -52,9 +52,15 @@
 	CGRect handleImageFrame = [_handleImageView frame];
 	handleImageFrame.size = CGSizeMake([_backgroundImageView bounds].size.width / 1.5,
 									   [_backgroundImageView bounds].size.height / 1.5);
-	handleImageFrame.origin = CGPointMake(([self bounds].size.width - handleImageFrame.size.width) / 2,
-										  ([self bounds].size.height - handleImageFrame.size.height) / 2);
-	[_handleImageView setFrame:handleImageFrame];
+    
+	handleImageFrame.origin =  CGPointMake(([_backgroundImageView bounds].size.width - handleImageFrame.size.width)/2, ([_backgroundImageView bounds].size.height - handleImageFrame.size.height)/2);
+    
+    
+    //CGPointMake(([self bounds].size.width - handleImageFrame.size.width) / 2,([self bounds].size.height - handleImageFrame.size.height) / 2);
+	
+    
+    
+    [_handleImageView setFrame:handleImageFrame];
 	[self addSubview:_handleImageView];
 	
 	_xValue = 0;
