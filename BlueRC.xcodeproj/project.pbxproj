@@ -319,11 +319,12 @@
 		CE938FC1179AFCBE0013699D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Scott Cheezem (9RYNT8Z3J9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueRC/BlueRC-Prefix.pch";
 				INFOPLIST_FILE = "BlueRC/BlueRC-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8295359B-AD38-4569-8F14-7E866DB8C0B4";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -331,11 +332,12 @@
 		CE938FC2179AFCBE0013699D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Scott Cheezem (9RYNT8Z3J9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueRC/BlueRC-Prefix.pch";
 				INFOPLIST_FILE = "BlueRC/BlueRC-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8295359B-AD38-4569-8F14-7E866DB8C0B4";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

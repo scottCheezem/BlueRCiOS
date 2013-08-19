@@ -8,11 +8,7 @@
 
 #import "ViewController.h"
 
-//the values reference the index of buf, UPLED referes to the index of the value to set for the led
-#define UPLED 7
-#define RIGHTLED 3
-#define DOWNLED 1
-#define LEFTLED 5
+
 
 
 @interface ViewController ()
@@ -63,48 +59,61 @@
 
         
         //an array of pin addresses and values
-        UInt8 buf[9] = {0x03, 0x00, 0x0B, 0x00, 0x0C, 0x00, 0x0D, 0x00, 0x00};
+        /*
+         pin 3=3
+         pin B=11
+         pin C=12
+         pin D=13
+         
+         */
+        
+        //buf[]={scaledValForMotor1, dirForMotor1(HIGH|LOW),scalevValForMotor2, dirForMotor2(HIGH|LOW) NULL}
+        UInt8 buf[5] = {0x00, 0x00, 0x00, 0x00, 0x00};
+        //UInt8 buf[9] = {0x03, 0x00, 0x0B, 0x00, 0x0C, 0x00, 0x0D, 0x00, 0x00};
+        
+        
         //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
         //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
         int scaledXval = abs(floorf((float)self.analogStick.xValue*255));
         
         int scaledYval = abs(floorf((float)self.analogStick.yValue*255));
         
+        buf[0] = scaledYval;
+        buf[2] = scaledXval;
+        
         if(self.analogStick.xValue >= 0 && self.analogStick.yValue >= 0){
-            //quad 1
+            //forward and to the right
             
-            buf[UPLED] = scaledYval;
-            buf[RIGHTLED] = scaledXval;
-            buf[DOWNLED] = 0x00;
-            buf[LEFTLED] = 0x00;
+            NSLog(@"forward and to the right");
+            buf[1] = 1;
+            buf[3] = 0;
+            
+            
 
         }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue >= 0){
-            //quad 2
-            buf[UPLED] = scaledYval;
-            buf[RIGHTLED] = 0x00;
-            buf[DOWNLED] = 0x00;
-            buf[LEFTLED] = scaledXval;
-            
+            //forward and to the left
+            NSLog(@"forward and to the left");
+            buf[1] = 1;
+            buf[3] = 1;
+
             
         }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue <= 0){
-            //quad 3
-            buf[UPLED] = 0x00;
-            buf[RIGHTLED] = 0x00;
-            buf[DOWNLED] = scaledYval;
-            buf[LEFTLED] = scaledXval;
+            NSLog(@"backwards and to the left");
+            //backwards and to the right
+            buf[1] = 0;
+            buf[3] = 1;
             
             
         }else if (self.analogStick.xValue >=0 && self.analogStick.yValue <= 0){
-            //quad 4
-            buf[UPLED] = 0x00;
-            buf[RIGHTLED] = scaledXval;
-            buf[DOWNLED] = scaledYval;
-            buf[LEFTLED] = 0x00;
+            //backwards and to the left
+            NSLog(@"backwards and to the right");
+            buf[1] = 0;
+            buf[3] = 0;
             
         }
         
         
-        NSData *d = [[NSData alloc]initWithBytes:buf length:9];
+        NSData *d = [[NSData alloc]initWithBytes:buf length:5];
         
         [ble write:d];
         
