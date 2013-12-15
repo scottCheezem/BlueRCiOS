@@ -58,60 +58,32 @@
     if([ble isConnected]){
 
         
-        //an array of pin addresses and values
-        /*
-         pin 3=3
-         pin B=11
-         pin C=12
-         pin D=13
-         
-         */
+        //[xy]Mag : magnitude for the x or y axis, 0-100
+        //[xy]Sign : the direction 1 positive, 0 for negative along the axis
         
-        //buf[]={scaledValForMotor1, dirForMotor1(HIGH|LOW),scalevValForMotor2, dirForMotor2(HIGH|LOW) NULL}
+        //buf[]={xMag,xSign,yMag,ySign, NULL}
         UInt8 buf[5] = {0x00, 0x00, 0x00, 0x00, 0x00};
-        //UInt8 buf[9] = {0x03, 0x00, 0x0B, 0x00, 0x0C, 0x00, 0x0D, 0x00, 0x00};
         
+        int scaledXval = abs(self.analogStick.xValue*100);
         
-        //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
-        //UInt8 buf[5] = {0x03, 0x00, 0x05, 0x00, 0x00};
-        int scaledXval = abs(floorf((float)self.analogStick.xValue*255));
+        int scaledYval = abs(self.analogStick.yValue*100);
         
-        int scaledYval = abs(floorf((float)self.analogStick.yValue*255));
+        buf[0] = scaledXval;
+        buf[2] = scaledYval;
         
-        buf[0] = scaledYval;
-        buf[2] = scaledXval;
-        
-        if(self.analogStick.xValue >= 0 && self.analogStick.yValue >= 0){
-            //forward and to the right
+        if(self.analogStick.xValue >= 0 ){
             
-            NSLog(@"forward and to the right");
             buf[1] = 1;
-            buf[3] = 1;
-            
-            
 
-        }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue >= 0){
-            //forward and to the left
-            NSLog(@"forward and to the left");
-            buf[1] = 1;
-            buf[3] = 0;
-
-            
-        }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue <= 0){
-            NSLog(@"backwards and to the left");
-            //backwards and to the right
+        }else if(self.analogStick.xValue < 0){
             buf[1] = 0;
-            buf[3] = 1;
-            
-            
-        }else if (self.analogStick.xValue >=0 && self.analogStick.yValue <= 0){
-            //backwards and to the left
-            NSLog(@"backwards and to the right");
-            buf[1] = 0;
-            buf[3] = 0;
-            
         }
-        
+        if(self.analogStick.yValue >= 0){
+            buf[3] = 1;
+
+        }else if(self.analogStick.yValue < 0){
+            buf[3] = 0;
+        }
         
         NSData *d = [[NSData alloc]initWithBytes:buf length:5];
         
