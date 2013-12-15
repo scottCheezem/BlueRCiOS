@@ -86,7 +86,7 @@
             
             NSLog(@"forward and to the right");
             buf[1] = 1;
-            buf[3] = 0;
+            buf[3] = 1;
             
             
 
@@ -94,7 +94,7 @@
             //forward and to the left
             NSLog(@"forward and to the left");
             buf[1] = 1;
-            buf[3] = 1;
+            buf[3] = 0;
 
             
         }else if(self.analogStick.xValue <= 0 && self.analogStick.yValue <= 0){
