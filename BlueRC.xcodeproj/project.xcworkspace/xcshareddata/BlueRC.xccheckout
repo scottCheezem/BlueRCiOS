@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3084C8CA-3088-4245-B9D6-EFD0C87B3A22</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BlueRC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C6797F47-B9F8-42FE-978B-C004AAA8308E</key>
+		<string>https://github.com/scottCheezem/BlueRCiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BlueRC.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8BCEB351-41A1-412C-9F17-58E21C5CE105</key>
+		<string>../../../../Desktop/BlueRC</string>
+		<key>C6797F47-B9F8-42FE-978B-C004AAA8308E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/scottCheezem/BlueRCiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C6797F47-B9F8-42FE-978B-C004AAA8308E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8BCEB351-41A1-412C-9F17-58E21C5CE105</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BlueRC</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C6797F47-B9F8-42FE-978B-C004AAA8308E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BlueRC</string>
+		</dict>
+	</array>
+</dict>
+</plist>

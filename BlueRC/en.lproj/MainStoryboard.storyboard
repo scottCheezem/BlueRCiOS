@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,7 +21,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3k-ua-mDB" customClass="JSAnalogueStick">
-                                <rect key="frame" x="78" y="174" width="150" height="150"/>
+                                <rect key="frame" x="85" y="199" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="RSSI:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTb-Ge-2dP">
@@ -47,21 +47,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="t3k-ua-mDB" secondAttribute="trailing" constant="92" id="6nB-X0-Z9Q"/>
-                            <constraint firstAttribute="bottom" secondItem="wcu-39-pcN" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7g8-88-1zY"/>
-                            <constraint firstAttribute="trailing" secondItem="POe-Ti-7ok" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7kT-6b-3jd"/>
-                            <constraint firstAttribute="bottom" secondItem="QTb-Ge-2dP" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="FC4-Lm-aZg"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t3k-ua-mDB" secondAttribute="trailing" constant="92" type="user" id="GAC-hc-cFo"/>
-                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="t3k-ua-mDB" secondAttribute="bottom" constant="224" type="user" id="IUW-ML-mqN"/>
-                            <constraint firstItem="t3k-ua-mDB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="174" id="OhH-US-twO"/>
-                            <constraint firstAttribute="trailing" secondItem="wcu-39-pcN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="b05-Hc-Dcb"/>
-                            <constraint firstItem="t3k-ua-mDB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="78" id="cSc-Sy-WdT"/>
-                            <constraint firstItem="QTb-Ge-2dP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mhc-CY-iyW"/>
-                            <constraint firstItem="t3k-ua-mDB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3" secondAttribute="leading" constant="78" type="user" id="pVQ-le-h1C"/>
-                            <constraint firstItem="t3k-ua-mDB" firstAttribute="top" relation="lessThanOrEqual" secondItem="3" secondAttribute="top" constant="174" type="user" id="s87-c6-4pu"/>
-                            <constraint firstItem="POe-Ti-7ok" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="uyj-vv-0qM"/>
-                            <constraint firstAttribute="bottom" secondItem="t3k-ua-mDB" secondAttribute="bottom" constant="224" id="y0f-mj-2dk"/>
-                            <constraint firstItem="POe-Ti-7ok" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y6z-4g-0CW"/>
+                            <constraint firstItem="QTb-Ge-2dP" firstAttribute="leading" secondItem="POe-Ti-7ok" secondAttribute="leading" type="default" id="5Hp-FX-jDX"/>
+                            <constraint firstItem="wcu-39-pcN" firstAttribute="bottom" secondItem="QTb-Ge-2dP" secondAttribute="bottom" type="default" id="Gst-E6-hAb"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="199" id="PEX-m0-mHu"/>
+                            <constraint firstAttribute="trailing" secondItem="POe-Ti-7ok" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="TLR-ks-uPM"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="centerX" secondItem="POe-Ti-7ok" secondAttribute="centerX" type="default" id="Wv1-dD-Ikv"/>
+                            <constraint firstItem="POe-Ti-7ok" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZDF-AO-8gE"/>
+                            <constraint firstItem="wcu-39-pcN" firstAttribute="trailing" secondItem="POe-Ti-7ok" secondAttribute="trailing" type="default" id="nss-4Y-MlO"/>
+                            <constraint firstAttribute="bottom" secondItem="QTb-Ge-2dP" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="pgr-rm-7zI"/>
+                            <constraint firstItem="POe-Ti-7ok" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rZF-Wy-P1h"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="85" id="sa1-5B-OeW"/>
+                            <constraint firstItem="t3k-ua-mDB" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="ucP-fl-VaW"/>
                         </constraints>
                     </view>
                     <connections>

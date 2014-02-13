@@ -169,8 +169,8 @@
 	_yValue = 0.0;
 	
 	CGRect handleImageFrame = [_handleImageView frame];
-	handleImageFrame.origin = CGPointMake(([self bounds].size.width - [_handleImageView bounds].size.width) / 2,
-										  ([self bounds].size.height - [_handleImageView bounds].size.height) / 2);
+	handleImageFrame.origin = CGPointMake(([_backgroundImageView bounds].size.width - [_handleImageView bounds].size.width) / 2,
+										  ([_backgroundImageView bounds].size.height - [_handleImageView bounds].size.height) / 2);
 	[_handleImageView setFrame:handleImageFrame];
 	
 	if ([self.delegate respondsToSelector:@selector(analogueStickDidChangeValue:)])
@@ -184,9 +184,10 @@
 	_xValue = 0.0;
 	_yValue = 0.0;
 	
+    
 	CGRect handleImageFrame = [_handleImageView frame];
-	handleImageFrame.origin = CGPointMake(([self bounds].size.width - [_handleImageView bounds].size.width) / 2,
-										  ([self bounds].size.height - [_handleImageView bounds].size.height) / 2);
+	handleImageFrame.origin = CGPointMake(([_backgroundImageView bounds].size.width - [_handleImageView bounds].size.width) / 2,
+										  ([_backgroundImageView bounds].size.height - [_handleImageView bounds].size.height) / 2);
 	[_handleImageView setFrame:handleImageFrame];
 	
 	if ([self.delegate respondsToSelector:@selector(analogueStickDidChangeValue:)])
